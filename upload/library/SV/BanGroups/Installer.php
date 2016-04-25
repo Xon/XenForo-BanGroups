@@ -6,7 +6,7 @@ class SV_BanGroups_Installer
     {
         $required = '5.5.0';
         $phpversion = phpversion();
-        if (version_compare($phpversion, $required, '>'))
+        if (version_compare($phpversion, $required, '<'))
         {
             throw new XenForo_Exception("PHP {$required} or newer is required. {$phpversion} does not meet this requirement. Please ask your host to upgrade PHP", true);
         }
